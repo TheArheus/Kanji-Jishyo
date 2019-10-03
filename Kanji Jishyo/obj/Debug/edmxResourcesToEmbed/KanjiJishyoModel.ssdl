@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище KanjiJishyo1Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Examples">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KanjiId" Type="int" Nullable="false" />
+    <Property Name="KanjiExample" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExampleTranslation" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Kanji">
+    <Key>
+      <PropertyRef Name="KanjiId" />
+    </Key>
+    <Property Name="KanjiId" Type="int" Nullable="false" />
+    <Property Name="KanjiMean" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="KanjiStrokes" Type="int" Nullable="false" />
+    <Property Name="KanjiImage" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="KanjiDraw" Type="image" />
+    <Property Name="KanjiKey" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KanjiRatingId" Type="int" />
+  </EntityType>
+  <EntityType Name="KanjiRating">
+    <Key>
+      <PropertyRef Name="KanjiRatingId" />
+    </Key>
+    <Property Name="KanjiRatingId" Type="int" Nullable="false" />
+    <Property Name="PopularityRating" Type="float" Nullable="false" />
+    <Property Name="JLPTRating" Type="float" Nullable="false" />
+    <Property Name="SchoolRating" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KanjiReadings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KanjiId" Type="int" Nullable="false" />
+    <Property Name="OnYomi1" Type="nvarchar" MaxLength="30" />
+    <Property Name="OnYomi2" Type="nvarchar" MaxLength="30" />
+    <Property Name="KunYomi1" Type="nvarchar" MaxLength="30" />
+    <Property Name="KunYomi2" Type="nvarchar" MaxLength="30" />
+    <Property Name="KunYomi3" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Words">
+    <Key>
+      <PropertyRef Name="KanjiId" />
+    </Key>
+    <Property Name="KanjiId" Type="int" Nullable="false" />
+    <Property Name="WordId" Type="int" Nullable="false" />
+    <Property Name="Kanji1Id" Type="int" Nullable="false" />
+    <Property Name="Kanji2Id" Type="int" />
+    <Property Name="Kanji3Id" Type="int" />
+    <Property Name="Kanji4Id" Type="int" />
+    <Property Name="Translate" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_dbo_Examples_dbo_Kanji_KanjiId">
+    <End Role="Kanji" Type="Self.Kanji" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Examples" Type="Self.Examples" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kanji">
+        <PropertyRef Name="KanjiId" />
+      </Principal>
+      <Dependent Role="Examples">
+        <PropertyRef Name="KanjiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Kanji_dbo_KanjiRating_KanjiRatingId">
+    <End Role="KanjiRating" Type="Self.KanjiRating" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Kanji" Type="Self.Kanji" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KanjiRating">
+        <PropertyRef Name="KanjiRatingId" />
+      </Principal>
+      <Dependent Role="Kanji">
+        <PropertyRef Name="KanjiRatingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_KanjiReadings_dbo_Kanji_KanjiId">
+    <End Role="Kanji" Type="Self.Kanji" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="KanjiReadings" Type="Self.KanjiReadings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kanji">
+        <PropertyRef Name="KanjiId" />
+      </Principal>
+      <Dependent Role="KanjiReadings">
+        <PropertyRef Name="KanjiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Words_dbo_Kanji_KanjiId">
+    <End Role="Kanji" Type="Self.Kanji" Multiplicity="1" />
+    <End Role="Words" Type="Self.Words" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Kanji">
+        <PropertyRef Name="KanjiId" />
+      </Principal>
+      <Dependent Role="Words">
+        <PropertyRef Name="KanjiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="PopularityKanji" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SchoolKanji" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="Хранилище KanjiJishyo1ModelContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Examples" EntityType="Self.Examples" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kanji" EntityType="Self.Kanji" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KanjiRating" EntityType="Self.KanjiRating" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KanjiReadings" EntityType="Self.KanjiReadings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Words" EntityType="Self.Words" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_Examples_dbo_Kanji_KanjiId" Association="Self.FK_dbo_Examples_dbo_Kanji_KanjiId">
+      <End Role="Kanji" EntitySet="Kanji" />
+      <End Role="Examples" EntitySet="Examples" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Kanji_dbo_KanjiRating_KanjiRatingId" Association="Self.FK_dbo_Kanji_dbo_KanjiRating_KanjiRatingId">
+      <End Role="KanjiRating" EntitySet="KanjiRating" />
+      <End Role="Kanji" EntitySet="Kanji" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_KanjiReadings_dbo_Kanji_KanjiId" Association="Self.FK_dbo_KanjiReadings_dbo_Kanji_KanjiId">
+      <End Role="Kanji" EntitySet="Kanji" />
+      <End Role="KanjiReadings" EntitySet="KanjiReadings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Words_dbo_Kanji_KanjiId" Association="Self.FK_dbo_Words_dbo_Kanji_KanjiId">
+      <End Role="Kanji" EntitySet="Kanji" />
+      <End Role="Words" EntitySet="Words" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

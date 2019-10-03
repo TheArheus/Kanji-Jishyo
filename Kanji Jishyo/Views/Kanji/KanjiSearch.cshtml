@@ -1,0 +1,97 @@
+﻿@{
+    KanjiJishyo1Entities db = new KanjiJishyo1Entities();
+
+    IEnumerable<KanjiSearch_Result> search_Result = db.KanjiSearch(ViewBag.KanjiOrValueItem, ViewBag.KanjiStrokesItem);
+}
+
+<div class="modal fade" id="FullKanjiInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <div class="top-left modal"><img /></div>
+                <div class="right">
+                    <div class=""><p><label>Кол-во черт: </label></p>Кол-во черт</div>
+                    <div class=""><p><label>Киёку кандзи: </label></p>Киёку кандзи</div>
+                    <div class="">Радикал(МБ будет)</div>
+                </div>
+                <div class="right">
+                    <div class="">
+                        <p><label>Онёми:</label></p>
+                        <div></div>
+                    </div>
+                    <div class="">
+                        <p><label>Кунёми:</label></p>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="">
+                    Слова с этим кандзи
+                    <div></div>
+                </div>
+                <div class="bottom">
+                    примеры с этим кандзи
+                    <div></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navbar container col-md-12">
+    <ul class="nav nav-pills text-center">
+        <li class="container col-md-3" role="presentation">@Html.ActionLink("Популярные", "KanjiPopular", "Kanji")</li>
+        <li class="container col-md-3" role="presentation">@Html.ActionLink("В школьном порядке", "KanjiSchool", "Kanji")</li>
+        <li class="container col-md-3" role="presentation">@Html.ActionLink("По уровню JLPT", "KanjiJLPT", "Kanji")</li>
+        <li class="container col-md-2 active" role="presentation"><a href="#">Поиск</a></li>
+    </ul>
+</div>
+<form id="newForm" method="POST" action="Kanji/Search">
+    <div class="col-md-12">
+        
+    </div>
+</form>
+
+@using (Html.BeginForm("KanjiSearch", "Kanji"))
+{
+    <div class="input-group col-md-8">
+        @Html.TextBox("KanjiOrValueItem", "ViewBag.KanjiOrValueItem", new { @class = "form-control col-md-6", @placeholder = "Поиск кандзи", @value = "@KanjiOrValueItem", @type = "text", @id = "#GetKanjiSearchResult" })
+    </div>
+    <div class="input-group">
+        @Html.TextBox("KanjiStrokesItem", "ViewBag.KanjiStrokesItem", new { @class = "form-control col-md-2", @placeholder = "Черт", @value = "@KanjiStrokesItem", @type = "number", @id = "#GetKanjiSearchResult" })
+    </div>
+    <input id="GetKanjiSearchResult" type="submit" class="hide">
+}
+
+<div id="GetKanjiSearchResult">
+    <div class="container col-md-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="col-md-1 text-center">Кандзи</th>
+                    <th class="col-md-2 text-center">Значение</th>
+                    <th class="col-md-2 text-center">Он</th>
+                    <th class="col-md-2 text-center">Кун</th>
+                </tr>
+            </thead>
+            <tr>
+            <tbody>
+                @foreach (var k in search_Result)
+                {
+                    <tr>
+                        <td><p data-target="#FullKanjiInfo" data-toggle="modal">@*KanjiImage*@@k.KanjiImage</p></td>
+                        <td><p>@*KanjiMean*@@k.KanjiMean</p></td>
+                        <td><p>@*On*@@k.On</p></td>
+                        <td><p>@*Kun*@@k.Kun</p></td>
+                    </tr>
+                }
+            </tbody>
+            </tr>
+        </table>
+    </div>
+</div>

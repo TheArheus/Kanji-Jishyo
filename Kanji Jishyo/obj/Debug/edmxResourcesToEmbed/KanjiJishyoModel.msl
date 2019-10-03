@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище KanjiJishyo1ModelContainer" CdmEntityContainer="KanjiJishyo1Entities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="KanjiJishyo1Model.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Examples">
+      <EntityTypeMapping TypeName="KanjiJishyo1Model.Examples">
+        <MappingFragment StoreEntitySet="Examples">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KanjiId" ColumnName="KanjiId" />
+          <ScalarProperty Name="KanjiExample" ColumnName="KanjiExample" />
+          <ScalarProperty Name="ExampleTranslation" ColumnName="ExampleTranslation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kanji">
+      <EntityTypeMapping TypeName="KanjiJishyo1Model.Kanji">
+        <MappingFragment StoreEntitySet="Kanji">
+          <ScalarProperty Name="KanjiId" ColumnName="KanjiId" />
+          <ScalarProperty Name="KanjiMean" ColumnName="KanjiMean" />
+          <ScalarProperty Name="KanjiStrokes" ColumnName="KanjiStrokes" />
+          <ScalarProperty Name="KanjiImage" ColumnName="KanjiImage" />
+          <ScalarProperty Name="KanjiDraw" ColumnName="KanjiDraw" />
+          <ScalarProperty Name="KanjiKey" ColumnName="KanjiKey" />
+          <ScalarProperty Name="KanjiRatingId" ColumnName="KanjiRatingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KanjiRating">
+      <EntityTypeMapping TypeName="KanjiJishyo1Model.KanjiRating">
+        <MappingFragment StoreEntitySet="KanjiRating">
+          <ScalarProperty Name="KanjiRatingId" ColumnName="KanjiRatingId" />
+          <ScalarProperty Name="PopularityRating" ColumnName="PopularityRating" />
+          <ScalarProperty Name="JLPTRating" ColumnName="JLPTRating" />
+          <ScalarProperty Name="SchoolRating" ColumnName="SchoolRating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KanjiReadings">
+      <EntityTypeMapping TypeName="KanjiJishyo1Model.KanjiReadings">
+        <MappingFragment StoreEntitySet="KanjiReadings">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KanjiId" ColumnName="KanjiId" />
+          <ScalarProperty Name="OnYomi1" ColumnName="OnYomi1" />
+          <ScalarProperty Name="OnYomi2" ColumnName="OnYomi2" />
+          <ScalarProperty Name="KunYomi1" ColumnName="KunYomi1" />
+          <ScalarProperty Name="KunYomi2" ColumnName="KunYomi2" />
+          <ScalarProperty Name="KunYomi3" ColumnName="KunYomi3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Words">
+      <EntityTypeMapping TypeName="KanjiJishyo1Model.Words">
+        <MappingFragment StoreEntitySet="Words">
+          <ScalarProperty Name="KanjiId" ColumnName="KanjiId" />
+          <ScalarProperty Name="WordId" ColumnName="WordId" />
+          <ScalarProperty Name="Kanji1Id" ColumnName="Kanji1Id" />
+          <ScalarProperty Name="Kanji2Id" ColumnName="Kanji2Id" />
+          <ScalarProperty Name="Kanji3Id" ColumnName="Kanji3Id" />
+          <ScalarProperty Name="Kanji4Id" ColumnName="Kanji4Id" />
+          <ScalarProperty Name="Translate" ColumnName="Translate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="PopularityKanji" FunctionName="Хранилище KanjiJishyo1Model.PopularityKanji">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KanjiJishyo1Model.PopularityKanji_Result">
+          <ScalarProperty Name="KanjiImage" ColumnName="KanjiImage" />
+          <ScalarProperty Name="KanjiMean" ColumnName="KanjiMean" />
+          <ScalarProperty Name="On" ColumnName="On" />
+          <ScalarProperty Name="Kun" ColumnName="Kun" />
+          <ScalarProperty Name="PopularityRating" ColumnName="PopularityRating" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SchoolKanji" FunctionName="Хранилище KanjiJishyo1Model.SchoolKanji">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KanjiJishyo1Model.SchoolKanji_Result">
+          <ScalarProperty Name="KanjiImage" ColumnName="KanjiImage" />
+          <ScalarProperty Name="KanjiMean" ColumnName="KanjiMean" />
+          <ScalarProperty Name="On" ColumnName="On" />
+          <ScalarProperty Name="Kun" ColumnName="Kun" />
+          <ScalarProperty Name="PopularityRating" ColumnName="PopularityRating" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

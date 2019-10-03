@@ -1,0 +1,55 @@
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\ApplicationInsights.config
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Kanji Jishyo.dll.config
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Kanji Jishyo.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Kanji Jishyo.pdb
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Antlr3.Runtime.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.AI.Web.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Newtonsoft.Json.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.Helpers.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.Mvc.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.Optimization.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.Razor.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.WebPages.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.WebPages.Razor.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\WebGrease.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.Helpers.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.Mvc.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.Optimization.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.Razor.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.WebPages.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\System.Web.WebPages.Razor.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Antlr3.Runtime.pdb
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Newtonsoft.Json.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\Microsoft.AI.Web.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\ru\System.Web.Razor.resources.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\obj\Debug\Kanji Jishyo.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\obj\Debug\Kanji Jishyo.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\obj\Debug\Kanji Jishyo.pdb
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\EntityFramework.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\EntityFramework.SqlServer.dll
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\EntityFramework.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\bin\EntityFramework.SqlServer.xml
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\obj\Debug\Kanji_Jishyo.Migrations.AddKanjiClass.resources
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\obj\Debug\Kanji Jishyo.csproj.GenerateResource.Cache
+C:\Users\Asus\source\repos\Kanji Jishyo\Kanji Jishyo\obj\Debug\Kanji Jishyo.csprojResolveAssemblyReference.cache

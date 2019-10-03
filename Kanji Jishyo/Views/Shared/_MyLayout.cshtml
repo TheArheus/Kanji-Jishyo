@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title – приложение ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+<div class="container col-xs-1 col-md-2 col-lg-2 left " padding="1">
+    <div class="panel-body panel-primary">
+        <div class="panel-heading list-group">Главное</div>
+        <ul class="list-group">
+            <li class="list-group-item">@Html.ActionLink("Главная Страница", "HomePage", "Home")</li>
+            <li class="list-group-item">@Html.ActionLink("FAQ", "FAQ", "FAQ")</li>
+        </ul>
+    </div>
+    <div class="panel-body panel-primary">
+        <div class="panel-heading list-group">Поиск по сайту</div>
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+            </span>
+            <input type="text" class="form-control" placeholder="Что ищем...?">
+        </div>
+    </div>
+    <div class="panel-body panel-primary">
+        <div class="panel-heading list-group">Кандзи</div>
+        <ul class="list-group">
+            <li class="list-group-item">@Html.ActionLink("Список Кандзи", "KanjiPopular", "Kanji")</li>
+            <li class="list-group-item">@Html.ActionLink("Категории", "", "")</li>
+            <li class="list-group-item">@Html.ActionLink("Карточки", "", "")</li>
+            <li class="list-group-item">@Html.ActionLink("Рейтинг ключей", "", "")</li>
+        </ul>
+    </div>
+    <div class="panel-body panel-primary">
+        <div class="panel-heading list-group">Слова</div>
+        <ul class="list-group">
+            <li class="list-group-item">@Html.ActionLink("Поиск слов", "", "")</li>
+            <li class="list-group-item">@Html.ActionLink("Категории", "", "")</li>
+        </ul>
+    </div>
+</div>
+<footer class="bottom col-md-10">
+    <div class="container body-content bottom">
+        @RenderBody()
+        <hr/>
+        <footer>
+            <p>@DateTime.Now.Year – KanjiDB&copy;</p>
+        </footer>
+    </div>
+</footer>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</body>
+</html>

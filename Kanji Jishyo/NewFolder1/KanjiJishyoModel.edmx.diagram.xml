@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="31b9bd81433e422ca4f668888a5cdbc8" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="KanjiJishyo1Model.C__MigrationHistory" Width="1.5" PointX="11" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KanjiJishyo1Model.Examples" Width="1.5" PointX="5.125" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KanjiJishyo1Model.Kanji" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="KanjiJishyo1Model.KanjiRating" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KanjiJishyo1Model.KanjiReadings" Width="1.5" PointX="7.625" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="KanjiJishyo1Model.Words" Width="1.5" PointX="5.125" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="KanjiJishyo1Model.FK_dbo_Examples_dbo_Kanji_KanjiId" ManuallyRouted="false" />
+        <AssociationConnector Association="KanjiJishyo1Model.FK_dbo_Kanji_dbo_KanjiRating_KanjiRatingId" ManuallyRouted="false" />
+        <AssociationConnector Association="KanjiJishyo1Model.FK_dbo_KanjiReadings_dbo_Kanji_KanjiId" ManuallyRouted="false" />
+        <AssociationConnector Association="KanjiJishyo1Model.FK_dbo_Words_dbo_Kanji_KanjiId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
